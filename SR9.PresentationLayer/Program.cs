@@ -17,8 +17,14 @@ namespace SR9.PresentationLayer
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new 
                 MediaTypeWithQualityHeaderValue("application/json"));
-
+            var brand = new Brand
+            {
+                BrandName = "Test",
+                Description = "test"
+            };
+            PostBrandAsync(brand).Wait();
             GetBrandAsync().Wait();
+            Console.ReadLine();
         }
         static async Task GetBrandAsync()
         {
@@ -34,6 +40,18 @@ namespace SR9.PresentationLayer
             else
             {
                 Console.WriteLine("No record");
+            }
+        }
+        static async Task PostBrandAsync(Brand brand)
+        {
+            HttpResponseMessage response = await client.PostAsJsonAsync<Brand>("api/Brands",brand);
+            if (response.IsSuccessStatusCode)
+            {
+                Console.WriteLine("Record was saved");
+            }
+            else
+            {
+                Console.WriteLine("save failed");
             }
         }
     }
