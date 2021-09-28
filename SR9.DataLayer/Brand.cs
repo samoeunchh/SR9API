@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace SR9API.Models
+namespace SR9.DataLayer
 {
     public class Brand
     {

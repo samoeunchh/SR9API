@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SR9API", "SR9API\SR9API.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SR9.PresentationLayer", "SR9.PresentationLayer\SR9.PresentationLayer.csproj", "{92FE18F6-0ABB-45A9-A347-FCE6E9A30661}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SR9.DataLayer", "SR9.DataLayer\SR9.DataLayer.csproj", "{7D43E843-ECC6-44AC-AEC0-9824ADA07511}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{92FE18F6-0ABB-45A9-A347-FCE6E9A30661}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92FE18F6-0ABB-45A9-A347-FCE6E9A30661}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92FE18F6-0ABB-45A9-A347-FCE6E9A30661}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D43E843-ECC6-44AC-AEC0-9824ADA07511}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D43E843-ECC6-44AC-AEC0-9824ADA07511}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D43E843-ECC6-44AC-AEC0-9824ADA07511}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D43E843-ECC6-44AC-AEC0-9824ADA07511}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
