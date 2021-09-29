@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SR9API", "SR9API\SR9API.csproj", "{F8E1755F-85AA-4812-9956-2E322FB5B962}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SR9.PresentationLayer", "SR9.PresentationLayer\SR9.PresentationLayer.csproj", "{92FE18F6-0ABB-45A9-A347-FCE6E9A30661}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SR9.PresentationLayer", "SR9.PresentationLayer\SR9.PresentationLayer.csproj", "{92FE18F6-0ABB-45A9-A347-FCE6E9A30661}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SR9.DataLayer", "SR9.DataLayer\SR9.DataLayer.csproj", "{7D43E843-ECC6-44AC-AEC0-9824ADA07511}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RS9.PresentationDesk", "RS9.PresentationDesk\RS9.PresentationDesk.csproj", "{FDED1A53-F69C-463A-BA39-0D85B9F13B22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{7D43E843-ECC6-44AC-AEC0-9824ADA07511}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D43E843-ECC6-44AC-AEC0-9824ADA07511}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D43E843-ECC6-44AC-AEC0-9824ADA07511}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDED1A53-F69C-463A-BA39-0D85B9F13B22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDED1A53-F69C-463A-BA39-0D85B9F13B22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDED1A53-F69C-463A-BA39-0D85B9F13B22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDED1A53-F69C-463A-BA39-0D85B9F13B22}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
