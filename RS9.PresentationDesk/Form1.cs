@@ -43,5 +43,60 @@ namespace RS9.PresentationDesk
                 MessageBox.Show("No record");
             }
         }
+
+        private async void button1_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtBrandName.Text))
+            {
+                MessageBox.Show("Brand Name field is required");
+                return;
+            }
+            var brand = new Brand
+            {
+                BrandName=txtBrandName.Text,
+                Description =txtDescription.Text
+            };
+            HttpResponseMessage response = await client.PostAsJsonAsync<Brand>("api/Brands", brand);
+            if (response.IsSuccessStatusCode)
+            {
+                MessageBox.Show("Record was saved");
+                Form1_Load(sender, e);
+            }
+            else
+            {
+                var errorMessage = response.Content.ReadAsStringAsync().GetAwaiter().GetResult();
+                MessageBox.Show(errorMessage);
+            }
+        }
+
+        private async void button2_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count > 0)
+            {
+                string message = "Do you want to delete?";
+                string title = "Delete Window";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result = MessageBox.Show(message, title, buttons);
+                if (result == DialogResult.Yes)
+                {
+                    var id = listView1.SelectedItems[0].Text;
+                    HttpResponseMessage response = await client.DeleteAsync("api/Brands/"+ id);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        MessageBox.Show("Record was deleted");
+                        Form1_Load(sender, e);
+                    }
+                    else
+                    {
+                        var errorMessage = response.Content.ReadAsStringAsync().GetAwaiter().GetResult();
+                        MessageBox.Show(errorMessage);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select an item for deleting...");
+            }
+        }
     }
 }
